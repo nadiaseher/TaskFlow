@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>✳ TaskFlow<span>.</span></h2>
+    <p class="label">WORKSPACE</p>
+    <a href="#dashboard">▦ Overview</a>
+    <a href="#tasks">☷ My Tasks</a>
+    <a href="#progress">◷ Progress</a>
+    <div class="profile">
+      <div class="avatar">NS</div>
+      <div><strong>Nadia Sehar</strong><small>Personal account</small></div>
+    </div>
+  </aside>
+
+  <main id="dashboard">
+    <header>Workspace / <strong>Overview</strong></header>
+
+    <section class="welcome">
+      <p class="label">YOUR PERSONAL WORKSPACE</p>
+      <h1>Good things take <span>focus.</span></h1>
+      <p>Make room for what matters. One task at a time.</p>
+    </section>
+
+    <section class="stats">
+      <div class="card"><p>Total Tasks</p><h2 id="totalCount">0</h2></div>
+      <div class="card"><p>Completed</p><h2 id="completedCount">0</h2></div>
+      <div class="card"><p>Remaining</p><h2 id="remainingCount">0</h2></div>
+      <div class="card"><p>Completion Rate</p><h2><span id="completionRate">0</span>%</h2></div>
+    </section>
+
+    <section class="content">
+      <div class="task-panel" id="tasks">
+        <h2>My Tasks <span id="taskBadge">0</span></h2>
+        <p>Keep your priorities clear and your day on track.</p>
+        <form id="taskForm">
+          <input id="taskInput" type="text" placeholder="What needs to be done?">
+          <button type="submit">+ Add Task</button>
+        </form>
+        <p id="taskLabel">0 tasks</p>
+        <ul id="taskList"></ul>
+        <div id="emptyMessage">
+          <h3>Your space, your pace.</h3>
+          <p>Add your first task and start making progress.</p>
+        </div>
+      </div>
+
+      <aside class="progress-panel" id="progress">
+        <h2>Your Progress</h2>
+        <div class="circle"><strong id="ringPercent">0%</strong></div>
+        <p>Completed: <span id="legendDone">0</span></p>
+        <p>Remaining: <span id="legendTodo">0</span></p>
+      </aside>
+    </section>
+
+    <footer>© 2026 TaskFlow · Designed for focus ♥</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
